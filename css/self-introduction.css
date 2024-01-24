@@ -1,0 +1,242 @@
+html{
+  font-size: 62.5%;
+}
+body{
+  font-family: 'bilo', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #848484;
+  background-color: #fff;
+}
+img{
+  width: 100%;
+  vertical-align: bottom;
+}
+a{
+  text-decoration: none;
+  color: #848484;
+  letter-spacing: 0.1em;
+  line-height: 23px;
+  font-weight: lighter;
+}
+ul{
+  list-style: none;
+}
+input{
+  border: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance:none;
+}
+textarea{
+  border: 0;
+  outline: none;
+  resize: none;
+}
+main-navgation a{
+	color: #848484;
+}
+.wave{
+	background:#000;
+}
+
+.blur{
+	text-align: center;
+	animation-name: blurAnime;
+	animation-duration: 1.8s;
+	animation-fill-mode: fowards;
+	margin: 22% 10px 10px 10px;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+#wrapper p{
+  padding:500px 0;
+  text-align:center;
+}
+
+/*========= waveを描画するエリア設定 ===============*/
+
+.wave{
+  position: relative;
+}
+
+.wave canvas{
+    position: fixed;
+    display: block;
+	top: 70%;
+    bottom: 0;
+ 　　left:0;
+    width: 100%;
+	z-index: -1;
+}
+
+/*flex設定*/
+.flex-rr{
+  display: flex;
+  justify-content: space-between;
+}
+/*flex設定*/
+
+
+.kiechannituite{
+	top: 5%;
+    left: 15%;
+	transform: translate(35%,0%);
+}
+.kiechan-text{
+	max-width: 400px;
+	font-family: 'Plantagenet Cherokee', "sans-serif";
+	font-weight: lighter;
+	font-size: 13px;
+	line-height: 23px;
+	letter-spacing: 0.2em;
+	margin: 53% 18% 0% 0%;
+}
+.about-img{
+    max-width: 442px;
+	margin: auto;
+	margin-top: 11%;
+	margin-right: 0;
+}
+.fadeIn1{
+	animation-name: fadeInAnime;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	opacity:0 ;
+}
+.fadeIn2{
+	animation-name: fadeInAnime;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+	opacity:0 ;
+}
+@keyframes fadeInAnime{
+	from{
+		opacity: 0;
+	}
+	
+	to{
+		opacity: 1;
+	}
+	
+}
+.nav-item {
+  padding-bottom: 5px;
+  position: relative;
+}
+.nav-item::before {
+  background: #828282;
+  content: '';
+  width: 100%;
+  height: 0.1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform .5s;
+}
+.nav-item:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+/*fotter*/
+
+.infomation-text{
+    text-align: center;
+	padding-top: 1%;
+	margin: auto;
+	display: none;
+}
+
+/*========= waveを描画するエリア設定 ===============*/
+
+.wave{
+  position: relative;
+}
+
+.wave canvas{
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left:0;
+    width: 100%;
+}
+
+
+@keyframes blurAnime{
+	from{
+		filter: blur(10px);
+		transform: scale(1.02);
+	}
+	to{
+		filter: blur(0);
+		transform: scale(1);
+	}
+	
+}
+
+/* -----------------------------------------------------------------------------------------------スマホ版 */
+
+@media screen and (max-width:428px){
+/* -------------------------- */
+/* sp-header
+/* -------------------------- */
+
+    .flex-rr{
+    display: block;
+	flex-direction: column-reverse;
+}
+
+	.about-img{
+    display: relative;
+    max-width: 300px;
+	margin: auto;
+	margin-top: 39%;
+	left: 0%;
+}
+	.kiechannituite{
+	max-width: 100%;
+	position: fixed;
+	top: 1%;
+    left: 15%;
+	transform: translate(35%,0%);
+}
+	.kiechan-text{
+	position: absolute;
+	max-width: 120%;
+    display: block;
+	font-family: 'Plantagenet Cherokee', "sans-serif";
+	font-weight: lighter;
+	font-size: 10px;
+	line-height: 20px;
+	letter-spacing: 0.05em;
+	margin: auto;
+	top: 110%;
+    left: 0%;
+    transform: translate(-40%,-0%);
+}
+
+	
+/*========= waveを描画するエリア設定 ===============*/
+
+.wave{
+  position: relative;
+}
+
+.wave canvas{
+    position: fixed;
+    display: block;
+	top: 30%;
+    bottom: 0;
+ 　　left:0;
+    width: 100%;
+	z-index: -1;
+}
+
+
+}
+
+

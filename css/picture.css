@@ -1,0 +1,206 @@
+html{
+  font-size: 62.5%;
+}
+body{
+  font-family: 'bilo', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #848484;
+  background-color: #fff;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+img{
+  width: 100%;
+  vertical-align: bottom;
+}
+a{
+  text-decoration: none;
+  color: #848484;
+  letter-spacing: 0.1em;
+  line-height: 23px;
+  font-weight: lighter;
+}
+ul{
+  list-style: none;
+}
+input{
+  border: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance:none;
+}
+textarea{
+  border: 0;
+  outline: none;
+  resize: none;
+}
+main-navgation a{
+	color: #848484;
+}
+.wave{
+	background:#000;
+}
+
+.fadeIn1{
+	animation-name: fadeInAnime;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	opacity:0 ;
+}
+.fadeIn2{
+	animation-name: fadeInAnime;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+	opacity:0 ;
+}
+.fadeIn3{
+	animation-name: fadeInAnime;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	opacity:0 ;
+}
+.fadeIn4{
+	animation-name: fadeInAnime;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	opacity:0 ;
+}
+.fadeIn5{
+	animation-name: fadeInAnime;
+	animation-duration: 6s;
+	animation-fill-mode: forwards;
+	opacity:0 ;
+}
+@keyframes fadeInAnime{
+	from{
+		opacity: 0;
+	}
+	
+	to{
+		opacity: 1;
+	}
+	
+}
+/*========= レイアウトのためのCSS ===============*/
+
+/*flex設定*/
+.flex-rr{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-rc{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*flex設定*/
+
+
+
+.photo-list{
+	max-width: 910px;
+	top: 5%;
+    left: 15%;
+	transform: translate(30%,12%);
+}
+.photo-item{
+	max-width: 300px;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	transition:transform 0.3s;
+}
+.photo-item:last-of-type{
+}
+.photo-item:hover {
+  transform: scale(0.9);
+}
+
+/*fotter*/
+
+.infomation-text{
+    text-align: center;
+	padding-top: 1%;
+	margin: auto;
+	display: none;
+}
+
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+#wrapper p{
+  padding:500px 0;
+  text-align:center;
+}
+
+/*========= waveを描画するエリア設定 ===============*/
+
+.wave{
+  position: relative;
+}
+
+.wave canvas{
+    position: fixed;
+    display: block;
+	top: 70%;
+    bottom: 0;
+ 　　left:0;
+    width: 100%;
+	z-index: -1;
+}
+
+
+@keyframes blurAnime{
+	from{
+		filter: blur(10px);
+		transform: scale(1.02);
+	}
+	to{
+		filter: blur(0);
+		transform: scale(1);
+	}
+	
+}
+
+@media screen and (max-width:428px){
+/* -------------------------- */
+/* sp-header
+/* -------------------------- */
+	
+    .flex-rr{
+    display: flex;
+	flex-direction: column-reverse;
+}
+	
+	.photo-list{
+	max-width: 245px;
+	transform: translate(39%,6%);
+}
+    .photo-item{
+	max-width: 60px;
+	margin-right: 20px;
+	margin-bottom: 40px;
+	transition:transform 0.3s;
+}
+	
+/*========= waveを描画するエリア設定 ===============*/
+
+.wave{
+  position: relative;
+}
+
+.wave canvas{
+    position: fixed;
+    display: block;
+	top: 30%;
+    bottom: 0;
+ 　　left:0;
+    width: 100%;
+	z-index: -1;
+}
+
+}
