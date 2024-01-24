@@ -54,6 +54,7 @@ header{
 	letter-spacing: 0.1em;
 	font-style: normal;
 	color: #848484;
+	z-index: 999999;
 }
 .top-img{
 	position: relative;
